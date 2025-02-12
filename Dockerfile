@@ -6,7 +6,6 @@ ENV INSTANCE_DIR="/app/monster_training_images"
 ENV OUTPUT_DIR="/app/monster_lora_model"
 ENV VAE_PATH="madebyollin/sdxl-vae-fp16-fix"
 ENV CLASS_DIR="/app/monster_output_images"
-ENV HF_TOKEN="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"
 ENV CONFIG_YAML="/app/config.yaml"
 ENV DB_SCIPT="/app/diffusers/examples/dreambooth/train_dreambooth.py"
 
