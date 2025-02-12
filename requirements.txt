@@ -64,6 +64,7 @@ sympy==1.13.1
 tensorboard==2.18.0
 tensorboard-data-server==0.7.2
 tokenizers==0.21.0
+torch==2.6.0
 torchvision==0.21.0
 tqdm==4.67.1
 transformers==4.48.2
