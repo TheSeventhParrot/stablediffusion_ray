@@ -1,0 +1,33 @@
+image:
+  repository: "gcr.io/tejas-sandbox/sd-dreambooth"
+  tag: "latest"  # or your specific tag
+  pullPolicy: Always
+
+head:
+  replicas: 1
+  resources:
+    limits:
+      cpu: 1
+      memory: 2Gi
+      nvidia.com/gpu: 0
+    requests:
+      cpu: 1
+      memory: 2Gi
+  nodeSelector:
+    cloud.google.com/gke-nodepool: default-pool  # CPU pool
+  service:
+    type: ClusterIP
+
+worker:
+  replicas: 2
+  resources:
+    limits:
+      cpu: 3
+      memory: 8Gi
+      nvidia.com/gpu: 1
+    requests:
+      cpu: 3
+      memory: 8Gi
+      nvidia.com/gpu: 1
+  nodeSelector:
+    cloud.google.com/gke-nodepool: gpu-pool

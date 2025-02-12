@@ -1,0 +1,20 @@
+
+# ray-service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: raycluster-kuberay-head-svc
+spec:
+  type: ClusterIP  # or NodePort if you need external access
+  selector:
+    ray.io/node-type: head
+  ports:
+    - name: client
+      port: 10001
+      targetPort: 6379
+    - name: dashboard
+      port: 8265
+      targetPort: 8265
+    - name: metrics
+      port: 8080
+      targetPort: 8080

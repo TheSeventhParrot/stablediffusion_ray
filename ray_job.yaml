@@ -1,0 +1,9 @@
+apiVersion: ray.io/v1
+kind: RayJob
+metadata:
+  name: dreambooth-job
+  namespace: default
+spec:
+  entrypoint: "python3 /app/distributed_train.py"
+  clusterSelector:
+    ray.io/cluster: raycluster-kuberay
