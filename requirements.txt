@@ -7,7 +7,7 @@ bitsandbytes==0.45.1
 certifi==2025.1.31
 charset-normalizer==3.4.1
 click==8.1.8
--e git+https://github.com/huggingface/diffusers.git@9f28f1abbaf1de21454644ea5391389dabe9a14a#egg=diffusers
+-e git+https://github.com/huggingface/diffusers.git@a0c22997fd45770fffd9b454625e9ab525fa2b16#egg=diffusers
 docker-pycreds==0.4.0
 filelock==3.17.0
 frozenlist==1.5.0
@@ -71,6 +71,7 @@ transformers==4.48.2
 triton==3.2.0
 typing_extensions==4.12.2
 urllib3==2.3.0
+utils==1.0.2
 wandb==0.19.6
 wcwidth==0.2.13
 Werkzeug==3.1.3

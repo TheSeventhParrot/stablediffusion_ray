@@ -22,12 +22,12 @@ worker:
   replicas: 2
   resources:
     limits:
-      cpu: 3
-      memory: 8Gi
+      cpu: 4
+      memory: 12Gi
       nvidia.com/gpu: 1
     requests:
-      cpu: 3
-      memory: 8Gi
+      cpu: 4
+      memory: 12Gi
       nvidia.com/gpu: 1
   nodeSelector:
     cloud.google.com/gke-nodepool: gpu-pool

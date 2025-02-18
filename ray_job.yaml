@@ -4,6 +4,6 @@ metadata:
   name: dreambooth-job
   namespace: default
 spec:
-  entrypoint: "python3 /app/distributed_train.py"
+  entrypoint: "python3 /app/distributed_raytrain.py"
   clusterSelector:
     ray.io/cluster: raycluster-kuberay
