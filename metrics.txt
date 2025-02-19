@@ -1,0 +1,10 @@
+1 class image and 10 train steps
+--------------------------------
+3min 19s - 2 nodes
+2min 46s -1 node
+
+
+200 class images and 800 steps
+--------------------------------
+
+2hr 23min 25s - 1 node
