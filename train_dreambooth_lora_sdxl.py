@@ -1988,9 +1988,6 @@ def main(args):
                 ignore_patterns=["step_*", "epoch_*"],
             )
 
-    accelerator.end_training()
-
-
 if __name__ == "__main__":
     args = parse_args()
     main(args)
