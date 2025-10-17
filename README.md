@@ -13,8 +13,8 @@
       echo $distribution
       curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg
       curl -s -L https://nvidia.github.io/libnvidia-container/$distribution/libnvidia-container.list      | sed 's#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g' | sudo tee /etc/apt/sources.list.d/nvidia-container-toolkit.list
-     sudo apt-get update
-     sudo apt-get install -y nvidia-container-toolkit```
+      sudo apt-get update
+      sudo apt-get install -y nvidia-container-toolkit```
    
 5) Set up a GKE cluster with a gpu pool of 2 nodes and a singular head node
 6) You need to also install helm and appropriate resources which can be done like so:
@@ -29,12 +29,12 @@
       helm install raycluster kuberay/ray-cluster```
 7) Your GKE cluster is ready if it looks like this after running ```kubectl get pods```
 
-   ```
-   kuberay-operator-5dd6779f94-hrcwl             1/1     Running   0             4h43m
-   raycluster-kuberay-head-nqljc                 1/1     Running   0             44m
-   raycluster-kuberay-workergroup-worker-j8nq8   1/1     Running   1             103m
-   raycluster-kuberay-workergroup-worker-rl6jz   1/1     Running   1             103m
-   ```
+      ```
+      kuberay-operator-5dd6779f94-hrcwl             1/1     Running   0             4h43m
+      raycluster-kuberay-head-nqljc                 1/1     Running   0             44m
+      raycluster-kuberay-workergroup-worker-j8nq8   1/1     Running   1             103m
+      raycluster-kuberay-workergroup-worker-rl6jz   1/1     Running   1             103m
+      ```
    
 
 ### Usecase
